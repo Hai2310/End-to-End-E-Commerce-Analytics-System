@@ -1,6 +1,15 @@
+-- DROP TABLE
+DROP TABLE fact_sales;
+
+DROP TABLE dim_customer;
+DROP TABLE dim_product;
+DROP TABLE dim_seller;
+DROP TABLE dim_review;
+DROP TABLE dim_payment;
+DROP TABLE dim_date;
+
 
 -- DIMENSION TABLES
-
 CREATE TABLE dim_customer (
     customer_id VARCHAR(50) PRIMARY KEY,
     customer_unique_id VARCHAR(50) NOT NULL,
@@ -65,6 +74,7 @@ CREATE TABLE dim_seller (
     seller_zip_code_prefix VARCHAR(10) NOT NULL
 );
 
+
 -- FACT TABLE
 
 CREATE TABLE fact_sales (
@@ -88,6 +98,7 @@ CREATE TABLE fact_sales (
     approval_days INTEGER,
 
     is_late_delivery BOOLEAN NOT NULL,
+
 
     -- FOREIGN KEYS
 
