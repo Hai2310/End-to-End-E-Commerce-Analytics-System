@@ -14,11 +14,11 @@ for name,df in tables.items() :
     print(f"\n{name}: ")
     df.info()
 
-username = "postgres"
-password = "MINHHAI123"
-host = "192.168.1.4"
+username = "neondb_owner"
+password = "npg_5J3EptjDGMLd"
+host = "ep-morning-lab-aoi2dj2d.c-2.ap-southeast-1.aws.neon.tech"
 port = 5432
-database = "Olist_Ecommerce"
+database = "neondb"
 engine = create_engine(
     f"postgresql+psycopg2://{username}:{password}@{host}:{port}/{database}"
 )
